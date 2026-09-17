@@ -1,0 +1,11 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q --cov=src --cov-report=term-missing"
+
+[tool.coverage.run]
+# config.py is constant declarations only; scripts are entry points.
+omit = ["src/config.py", "scripts/*"]
+
+[tool.coverage.report]
+fail_under = 80

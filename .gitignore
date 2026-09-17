@@ -1,0 +1,31 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.DS_Store
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data and model weights are large; keep them out of git
+data/raw/*
+data/processed/*
+data/synthetic/*
+models/**/*.pt
+models/**/*.pth
+models/**/*.onnx
+outputs/crops/*
+outputs/annotated/*
+*.db
+*.sqlite3
+
+!**/.gitkeep
+
+# Holdout images are personal photos; labels are tracked, images are not
+data/holdout/images/*
+
+# YOLO training runs
+models/detection/*/
+runs/
+*.pt
